@@ -7,10 +7,12 @@
 # NOTE: Must copy and paste all items in the FAVE-extract folder into your data dir
 # to do: change wd for files (as separate from FAVE-extract python location)
 #
+# Currently tested on a mac
 ##################################################################################
 
 # (1) Set the working directory
-cd /Volumes/Michelle_2018/Data
-
 # (2) Loop through all the TextGrids in the directory & FAVE Extract!
+
+##### RUN AS 2 lines of code in the terminal ######
+cd /Volumes/Michelle_2018/Data
 for i in /Volumes/Michelle_2018/Data/*.TextGrid;  do python bin/extractFormantsUpdated.py   "${i/.TextGrid/.wav}" "${i/.TextGrid/.TextGrid}" "${i/.TextGrid/}"; done;
